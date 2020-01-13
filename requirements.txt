@@ -1,0 +1,8 @@
+tensorflow
+pillow
+h5py
+scipy
+flask
+flask-RESTful
+boto3
+pandas

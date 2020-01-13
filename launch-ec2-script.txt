@@ -1,0 +1,9 @@
+#!/bin/bash
+yum update -y
+yum install python3 libXext libSM libXrender tmux -y
+pip3 install tensorflow opencv-python opencv-contrib-python ipython matplotlib pillow h5py SciPy flask flask-RESTful boto3 pandas --user
+pip3 install --upgrade --user awscli
+mkdir app
+cd app
+aws s3 sync s3://aimls3bucket/ . --delete
+python3 predict-app-api.py
